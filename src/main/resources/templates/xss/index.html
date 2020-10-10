@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="ja">
+<head th:substituteby="layouts/app :: header"></head>
+<body>
+<div>
+    Input : [<span th:utext="${msg}"/>]
+    <form>
+        <input type="text" name="msg" value="<script>alert(0)</script>"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+</body>
+</html>
