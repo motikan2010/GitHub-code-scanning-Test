@@ -3,6 +3,7 @@ package com.motikan2010.github_code_scanning_test.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,7 @@ public class XssController {
 
         // Set Header
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "text/html");
+        headers.add("Content-Type", MediaType.TEXT_HTML_VALUE);
         return new ResponseEntity<>(new ObjectMapper().writeValueAsString(payload), headers, HttpStatus.OK);
     }
 
