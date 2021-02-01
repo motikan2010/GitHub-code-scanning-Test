@@ -25,6 +25,7 @@ public class XxeController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ResponseEntity<Map<String, String>> xxe(@RequestParam(value = "data") String data) throws Exception {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        docFactory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(new InputSource(new StringReader(data)));
         NodeList RegistrationNo = doc.getElementsByTagName("hoge");
