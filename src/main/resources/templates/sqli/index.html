@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="ja">
+<head th:replace="layouts/app :: header"></head>
+<body>
+<div>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Age</th></tr>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.age}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
