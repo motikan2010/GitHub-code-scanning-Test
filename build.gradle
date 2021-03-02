@@ -17,6 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'mysql:mysql-connector-java'
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
